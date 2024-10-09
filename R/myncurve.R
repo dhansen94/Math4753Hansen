@@ -26,3 +26,4 @@ myncurve <- function(mu, sigma, a) {
 
   return(list(mu = mu, sigma = sigma, probability = probability))
 }
+

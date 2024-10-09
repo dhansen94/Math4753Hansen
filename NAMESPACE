@@ -2,3 +2,4 @@
 
 export(myncurve)
 export(mysquare)
+export(ntickets)
