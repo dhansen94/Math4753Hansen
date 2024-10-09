@@ -19,6 +19,16 @@
 #' ntickets(N = 100, gamma = 0.5, p = 0.9)
 #' }
 ntickets <- function(N, gamma, p) {
+  # Input validation
+  if (!is.numeric(N) || N < 0) {
+    stop("Invalid input: N must be a non-negative number")
+  }
+  if (!is.numeric(gamma) || gamma < 0 || gamma > 1) {
+    stop("Invalid input: gamma must be a probability between 0 and 1")
+  }
+  if (!is.numeric(p) || p < 0 || p > 1) {
+    stop("Invalid probability: p must be between 0 and 1")
+  }
   # define the function  and parameters
   nd <- N
   # assigning a variable to the number of seats available

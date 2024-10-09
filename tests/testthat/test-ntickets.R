@@ -35,9 +35,9 @@ test_that("ntickets handles edge cases", {
 })
 
 test_that("ntickets handles invalid inputs", {
-  # Test case 6: Invalid probability
-  expect_error(ntickets(100, 0.05, 1.5), "invalid probability")
+  # Adjust the expected error message to match exactly
+  expect_error(ntickets(100, 0.05, 1.5), "Invalid probability: p must be between 0 and 1")
 
-  # Test case 7: Negative number of tickets
-  expect_error(ntickets(-10, 0.05, 0.9), "N must be non-negative")
+  # Example of another potential invalid input test, with appropriate specific message
+  expect_error(ntickets(-10, 0.05, 0.9), "Invalid input: N must be a non-negative number")
 })
